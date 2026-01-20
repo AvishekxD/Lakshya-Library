@@ -13,9 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lakshya Library",
+  title: "Lakshya Library - Where Aspirants Become Achievers.",
   description: "Book your seat. Build your future.",
+  icons: [
+    { rel: "icon", url: "/Fav_icons/favicon.ico" },
+    { rel: "icon", url: "/Fav_icons/favicon.svg", type: "image/svg+xml" },
+    { rel: "icon", url: "/Fav_icons/favicon-96x96.png", sizes: "96x96" },
+    { rel: "apple-touch-icon", url: "/Fav_icons/apple-touch-icon.png" },
+  ],
+  manifest: "/Fav_icons/site.webmanifest",
 };
+
 
 export default function RootLayout({
   children,

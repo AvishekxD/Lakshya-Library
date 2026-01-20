@@ -1,9 +1,20 @@
 @import "tailwindcss";
-@tailwind utilities;
+/* @tailwind utilities; */
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: oklch(0 0 0);
+  --secondary: oklch(0.25 0 0);
+  --secondary2: oklch(0.22 0 0);
+  --secondary3: oklch(13.979% 0.00002 271.152);
+  --secondary4: oklch(0.16 0 0);
+  --secondary5: oklch(0.18 0 0);
+  --ring: oklch(0.7200 0 0);
+  --ring1: oklch(79.837% 0.00009 271.152);
+  --Accent: oklch(1.00 0 0);
+  --Accent2: oklch(0.32 0 0);
+  --Accent3: oklch(0.40 0 0);
+  --Accent4: oklch(0.90 0 0);
 }
 
 @theme inline {
@@ -15,7 +26,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: oklch(0 0 0);
     --foreground: #ededed;
   }
 }
@@ -23,5 +34,111 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Geist", sans-serif;
 }
+
+/* firefox */
+:root {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.34 0 0) transparent;
+}
+
+/* Chrome, Edge, Safari */
+:root::-webkit-scrollbar {
+  width: 6px;
+}
+
+:root::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+:root::-webkit-scrollbar-thumb {
+  background-color: oklch(0.34 0 0);
+  border-radius: 10px;
+}
+
+/* Optional: subtle hover feedback */
+:root::-webkit-scrollbar-thumb:hover {
+  background-color: oklch(0.34 0 0);
+}
+
+
+.animatedButton {
+  animation-duration: 10000ms;
+}
+
+/* spark button properties */
+.spark-button {
+  --transition: 0.25s;
+  --spark: 3s;
+  --bg: black;
+  background: var(--bg);
+  padding: 6px 18px;
+  display: grid;
+  border-radius: 9999px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1000px 0 0 hsl(0 0% 20%) inset;
+  transition: box-shadow var(--transition), background var(--transition),
+    transform var(--transition);
+}
+
+.spark-button:hover .backdrop {
+  background: rgb(20 20 20);
+}
+
+.spark-button:hover {
+  transform: scale(1.05);
+}
+
+.spark-button .spark {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  rotate: 0deg;
+  overflow: hidden;
+  mask: linear-gradient(white, transparent 50%);
+  animation: flip calc(var(--spark) * 2) infinite steps(2, end);
+}
+
+@keyframes flip {
+  to {
+    rotate: 360deg;
+  }
+}
+
+.spark-button .spark:before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  aspect-ratio: 1;
+  inset: 0 auto auto 50%;
+  z-index: -1;
+  translate: -50% -15%;
+  rotate: 0;
+  transform: rotate(-90deg);
+  opacity: 1;
+  background: conic-gradient(from 0deg, transparent 0 340deg, white 360deg);
+  transition: opacity var(--transition);
+  animation: rotate var(--spark) linear infinite both;
+}
+
+.spark-button .backdrop {
+  position: absolute;
+  inset: 1px;
+  background: var(--bg);
+  border-radius: 9999px;
+  transition: background var(--transition) opacity var(--transition);
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+.spark-button .text {
+  z-index: 1;
+  --Accent: oklch(1.00 0 0);
+}
+
