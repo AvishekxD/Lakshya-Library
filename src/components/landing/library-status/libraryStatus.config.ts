@@ -1,5 +1,5 @@
 
-export const OPEN_HOUR = 10; // 10 AM
+export const OPEN_HOUR = 8; // 8 AM
 export const CLOSE_HOUR = 22; // 10 PM
 
 export type LibraryStatus =
@@ -18,9 +18,9 @@ export const STATUS_STYLES: Record<
   }
 > = {
   open: {
-    text: "Library is Open Now • 10:00 AM — 10:00 PM",
+    text: "Library is Open Now • 08:00 AM — 10:00 PM",
     container:
-      "bg-green-50 border-green-200 dark:border-green-600/70 text-green-700/80 dark:bg-green-600/20 dark:text-green-400/90",
+      "-mx-24 bg-green-50 border-green-200 dark:border-green-600/70 text-green-700/80 dark:bg-green-600/20 dark:text-green-400/90",
     dot: "bg-green-500",
     ping: "bg-green-400",
   },
@@ -32,14 +32,14 @@ export const STATUS_STYLES: Record<
     ping: "bg-amber-400",
   },
   closed: {
-    text: "Library is Closed • Opens at 10:00 AM",
+    text: "Library is Closed • Opens at 08:00 AM",
     container:
-      "bg-red-50 border-red-200 dark:border-red-600/40 text-red-700 dark:bg-red-800/10 dark:text-red-600/90",
+      "-mx-24 bg-red-50 border-red-200 dark:border-red-600/40 text-red-700 dark:bg-red-800/10 dark:text-red-600/90",
     dot: "bg-red-500",
     ping: "bg-red-400",
   },
   "opening-soon": {
-    text: "Opening Soon • 10:00 AM",
+    text: "Opening Soon • 08:00 AM",
     container:
       "bg-blue-50 border-blue-200 dark:border-blue-600/40 text-blue-700 dark:bg-blue-600/10 dark:text-blue-700",
     dot: "bg-blue-500",

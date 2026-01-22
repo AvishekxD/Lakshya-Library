@@ -35,9 +35,9 @@ export default function Hero() {
 
 
     return (
-        <main className="min-h-screen bg-white/80 dark:bg-background text-gray-900 p-16">
+        <main className="bg-white/80 dark:bg-background text-gray-900 pt-16">
             {/* Container-wise centered section */}
-            <section className="max-w-5xl mx-auto px-6 py-6 flex flex-col items-center text-center">
+            <section className="max-w-5xl mx-auto px-6 pt-6 flex flex-col items-center text-center">
 
                 {/* 1. Image / BackgroundLines*/}
                 <BackgroundLines className="flex items-center justify-center flex-col px-4">
@@ -88,7 +88,7 @@ export default function Hero() {
                     </motion.h1>
                 </AnimatePresence>
 
-                <div className="mt-2 h-10 sm:h-12 overflow-hidden text-neutral-700 dark:text-neutral-400/90">
+                <div className="mt-2 md:mb-0 mb-2 h-10 sm:h-12  text-neutral-700 dark:text-neutral-400/90">
                     <AnimatePresence mode="wait">
                         <motion.p
                             key={heroContent.subHeadings[index]}
@@ -96,7 +96,7 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.8, ease: "easeInOut" }}
-                            className="text-base sm:text-lg md:text-xl text-muted-foreground"
+                            className="text-base sm:text-lg md:text-xl text-muted-foreground "
                         >
                             {heroContent.subHeadings[index]}
                         </motion.p>

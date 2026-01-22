@@ -29,8 +29,8 @@ export default function LibraryStatusBadge({ delay = 800 }: Props) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className={`
-            inline-flex items-center gap-2
-            px-3 sm:px-4 py-2 my-3
+            inline-flex items-center gap-2 
+            px-3 sm:px-4 py-2 my-3 
             rounded-full border
             text-xs sm:text-sm font-semibold
             ${styles.container}
