@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,9 +20,9 @@ export const metadata: Metadata = {
     { rel: "icon", url: "/Fav_icons/favicon.ico" },
     { rel: "icon", url: "/Fav_icons/favicon.svg", type: "image/svg+xml" },
     { rel: "icon", url: "/Fav_icons/favicon-96x96.png", sizes: "96x96" },
-    { rel: "apple-touch-icon", url: "/Fav_icons/apple-touch-icon.png" },
+    { rel: "apple-touch-icon", url: "/Fav_icons/apple-icon.png" },
   ],
-  manifest: "/Fav_icons/site.webmanifest",
+  manifest: "/Fav_icons/site.webmanifest.json",
 };
 
 
@@ -31,12 +32,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
