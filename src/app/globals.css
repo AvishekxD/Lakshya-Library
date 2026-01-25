@@ -5,6 +5,7 @@
   --background: #ffffff;
   --foreground: oklch(0 0 0);
   --secondary: oklch(0.25 0 0);
+  --secondary1: oklch(0.23 0 0);
   --secondary2: oklch(0.22 0 0);
   --secondary3: oklch(13.979% 0.00002 271.152);
   --secondary4: oklch(0.16 0 0);
@@ -15,6 +16,8 @@
   --Accent2: oklch(0.32 0 0);
   --Accent3: oklch(0.40 0 0);
   --Accent4: oklch(0.90 0 0);
+  --color-one: oklch(83% .12 65);  
+  --border: oklch(35% 0 0);
 }
 
 @theme inline {
@@ -142,3 +145,47 @@ body {
   --Accent: oklch(1.00 0 0);
 }
 
+@theme inline {
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
+
+@theme inline {
+  --animate-meteor-effect: meteor 5s linear infinite;
+  
+  @keyframes meteor {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(215deg) translateX(-800px);
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes moon-glow {
+  0%, 100% { filter: drop-shadow(0 0 20px rgba(200,220,255,.6)); }
+  50% { filter: drop-shadow(0 0 50px rgba(200,220,255,1)); }
+}
