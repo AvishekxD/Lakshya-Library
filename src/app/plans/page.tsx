@@ -1,3 +1,5 @@
+import React from "react";
+
 export const PLANS = [
   { name: "1 Day", days: 1, price: 50 },
   { name: "7 Days", days: 7, price: 200 },
@@ -7,3 +9,9 @@ export const PLANS = [
   { name: "6 Months", days: 180, price: 2900 },
   { name: "1 Year", days: 365, price: 5400 },
 ];
+
+const PLANSPage: React.FC = () => {
+  return <div>PLANS Page</div>;
+};
+
+export default PLANSPage;
