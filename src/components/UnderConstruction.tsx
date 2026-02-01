@@ -1,7 +1,4 @@
 "use client";
-import { cn } from "@/lib/utils"
-import { DotPattern } from "./ui/dot-pattern";
-
 
 export function UnderConstruction(){
 
@@ -16,7 +13,7 @@ export function UnderConstruction(){
                     text-transparent
                     dark:from-white dark:to-[#a3a3a3]"
                 >
-                This Area is Under-Construction. <br />Please check back later...
+                This Area is Under-Construction. <br />Please check back later....
             </span>
             </div>
             
