@@ -9,6 +9,7 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
+import { ThemeToggle } from "./themetoggle";
 
 
 interface NavbarProps {
@@ -69,7 +70,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     <motion.div
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-      className={cn("fixed inset-x-0 top-1 z-40 w-full py-3", className)}
+      className={cn("fixed inset-x-0 top-1 z-50 w-full py-3", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -141,6 +142,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
           <span className="relative z-20">{item.name}</span>
         </a>
       ))}
+      <ThemeToggle duration={600} />
     </motion.div>
   );
 };
@@ -209,6 +211,7 @@ export const MobileNavMenu = ({
             className,
           )}
         >
+          <ThemeToggle duration={600} className="-p-1"/>
           {children}
         </motion.div>
       )}
