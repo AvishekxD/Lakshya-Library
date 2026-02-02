@@ -1,14 +1,56 @@
 # Lakshya Library
 
+Lakshya Library is a website created for a **physical study library** where students come to study in a **silent, focused, and disciplined environment**. 
+
+---
+
+## Preview/Screenshots
+### Hero-Section
 <p align="center">
   <img
-    src="/public/Lakshya_Library_Landing_Perview.gif"
+    src="public/Lakshya_Library_Landing_Perview.gif"
     alt="Lakshya Library – Landing Page Preview"
     width="800" height="482"
   />
 </p>
 
-Lakshya Library is a website created for a **physical study library** where students come to study in a **silent, focused, and disciplined environment**. 
+### FeatureShowCase-Section
+<p align="center">
+  <img
+    src="public/FeatureShowCase.png"
+    alt="Lakshya Library – Landing Page Preview"
+    width="800" height="482"
+  />
+</p>
+
+### Feedback-Section
+<p align="center">
+  <img
+    src="public/FeedbackSection.png"
+    alt="Lakshya Library – Landing Page Preview"
+    width="800" height="482"
+  />
+</p>
+
+
+### GoogleMaps-Section
+<p align="center">
+  <img
+    src="public/GoogleMapsSection.gif"
+    alt="Lakshya Library – Landing Page Preview"
+    width="800" height="482"
+  />
+</p>
+
+### Plans-Section
+<p align="center">
+  <img
+    src="public/PlansSection.png"
+    alt="Lakshya Library – Landing Page Preview"
+    width="800" height="482"
+  />
+</p>
+
 ---
 
 ## Project Status
