@@ -1,9 +1,9 @@
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 import { GoogleMaps } from "@/components/sections/GoogleMaps";
 // import ImageUpload from "@/components/ImageUpload";
 import Hero from "@/components/landing/Hero";
 // import { Feedback } from "@/components/layout/Feedback";
-import { NavbarDemo } from "@/components/Navbar";
+// import { NavbarDemo } from "@/components/Navbar";
 import FeatureShowcase from "@/components/sections/FeatureShowcase";
 import { GridBackground } from "@/components/ui/gridbackground";
 import ScrollToTop from "@/components/ui/scroll-to-top";
@@ -15,14 +15,14 @@ export default function Home() {
   return (
     <div>
       {/* <ImageUpload /> */}
-      <NavbarDemo />
+      {/* <NavbarDemo /> */}
       <Hero />
       <FeatureShowcase />
       <GridBackground />
       <GoogleMaps />
       <Plans/> 
       <UnderConstruction />
-      <Footer/>
+      {/* <Footer/> */}
       <ScrollToTop />
     </div>
   );

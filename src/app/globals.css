@@ -28,6 +28,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
 .dark {
   --background: oklch(0 0 0);
   --foreground: #fff;

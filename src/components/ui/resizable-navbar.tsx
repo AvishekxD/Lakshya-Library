@@ -10,6 +10,7 @@ import {
 
 import React, { useRef, useState } from "react";
 import { ThemeToggle } from "./themetoggle";
+import Link from "next/link";
 
 
 interface NavbarProps {
@@ -235,10 +236,10 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <a
-      href="#"
+    <Link 
+      href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
-    >
+      >
       <img
         src="/Fav_icons/favicon-96x96.png"
         className="rounded-lg"
@@ -247,7 +248,7 @@ export const NavbarLogo = () => {
         height={30}
       />
       <span className="font-medium text-black dark:text-white">Lakshya Library</span>
-    </a>
+    </Link>
   );
 };
 
